@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "normal": {
+      "model": "pmcore:myfirstblock"
+    },
+    "inventory": {
+      "model": "pmcore:myfirstblock"
+    }
+  }
+}

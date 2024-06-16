@@ -1,19 +1,18 @@
-package projectmanifolder.common;
+package projectmanifolder.pmcore.common;
 
 //custom imports
-import projectmanifolder.common.block.myfirstblock;
+import net.minecraft.item.*;
+import projectmanifolder.pmcore.*;
+import projectmanifolder.pmcore.common.block.myfirstblock;
 
 
 import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import projectmanifolder.Tags;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
@@ -29,14 +28,14 @@ public class CommonProxy {
 
     @SubscribeEvent
     // Register blocks here (Remove if not needed)
-    public void registerBlocks(RegistryEvent.Register<Block> event) {
+    public static void registerBlocks(RegistryEvent.Register<Block> event) {
         event.getRegistry().register(new myfirstblock());
     }
 
     @SubscribeEvent
     // Register items here (Remove if not needed)
-    public void registerItems(RegistryEvent.Register<Item> event) {
-
+    public static void registerItems(RegistryEvent.Register<Item> event) {
+        event.getRegistry().register(new ItemBlock(ModBlocks.myfirstblock).setRegistryName(myfirstblock.MY_FIRST_BLOCK));
     }
 
 }

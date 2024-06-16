@@ -1,0 +1,6 @@
+{
+  "parent": "pmcore:block/myfirstblock",
+  "textures": {
+    "all": "pmcore:blocks/myfirstblock"
+  }
+}
